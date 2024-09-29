@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt  # Importa a biblioteca para criação de gráficos
+
+def sao_complementares_grafico(angulo1, angulo2):
+    complementares = angulo1 + angulo2 == 90  # Verifica se a soma dos ângulos é 90 (complementares)
+    
+    plt.figure()  # Cria uma nova figura
+    plt.pie([angulo1, angulo2], labels=[f'{angulo1}°', f'{angulo2}°'], startangle=90, 
+            colors=['blue', 'orange'], autopct='%1.1f%%')  # Cria um gráfico de pizza com os dois ângulos
+    
+    plt.title(f'São complementares? {complementares}')  # Define o título do gráfico indicando se são complementares
+    plt.show()  # Exibe o gráfico
