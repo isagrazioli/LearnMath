@@ -1,0 +1,16 @@
+import math  # Importa a biblioteca para operações matemáticas
+import matplotlib.pyplot as plt  # Importa a biblioteca para criação de gráficos
+import numpy as np  # Importa a biblioteca para operações numéricas
+
+def area_circulo_grafico(raio):
+    area = math.pi * (raio ** 2)  # Calcula a área do círculo
+    theta = np.linspace(0, 2 * np.pi, 100)  # Gera 100 ângulos igualmente espaçados de 0 a 2π
+    
+    x = raio * np.cos(theta)  # Calcula as coordenadas x dos pontos ao longo da circunferência
+    y = raio * np.sin(theta)  # Calcula as coordenadas y dos pontos ao longo da circunferência
+    
+    plt.plot(x, y)  # Desenha o contorno do círculo
+    plt.fill(x, y, "g", alpha=0.3)  # Preenche o círculo com cor verde e transparência
+    plt.title(f'Área: {area:.2f}')  # Define o título do gráfico com o valor da área
+    plt.gca().set_aspect('equal')  # Ajusta a proporção para manter o círculo
+    plt.show()  # Exibe o gráfico
