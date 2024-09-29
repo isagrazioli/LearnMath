@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt  # Importa a biblioteca para criação de gráficos
+
+def area_triangulo_grafico(base, altura):
+    area = (base * altura) / 2  # Calcula a área do triângulo usando a fórmula da área
+    
+    # Desenha os lados do triângulo
+    plt.plot([0, base, 0, 0], [0, 0, altura, 0], marker='o')
+    
+    # Preenche o triângulo com cor magenta e transparência
+    plt.fill([0, base, 0], [0, 0, altura], "m", alpha=0.3)
+    
+    plt.title(f'Área: {area:.2f}')  # Define o título do gráfico com o valor da área
+    plt.show()  # Exibe o gráfico
