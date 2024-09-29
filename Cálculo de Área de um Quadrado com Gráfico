@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt  # Importa a biblioteca para criação de gráficos
 
-def perimetro_retangulo_grafico(largura, altura):
-    perimetro = 2 * (largura + altura)  # Calcula o perímetro do retângulo
-    x = [0, largura, largura, 0, 0]  # Define os pontos x dos vértices do retângulo
-    y = [0, 0, altura, altura, 0]  # Define os pontos y dos vértices do retângulo
+def area_quadrado_grafico(lado):
+    area = lado ** 2  # Calcula a área do quadrado
+    x = [0, lado, lado, 0, 0]  # Define os pontos x dos vértices do quadrado
+    y = [0, 0, lado, lado, 0]  # Define os pontos y dos vértices do quadrado
     
-    plt.plot(x, y, marker='o')  # Desenha o contorno do retângulo com pontos nos vértices
-    plt.fill(x, y, "b", alpha=0.3)  # Preenche o retângulo com cor azul e transparência
-    plt.title(f'Perímetro: {perimetro}')  # Define o título do gráfico com o valor do perímetro
+    plt.plot(x, y, marker='o')  # Desenha o contorno do quadrado com pontos nos vértices
+    plt.fill(x, y, "r", alpha=0.3)  # Preenche o quadrado com cor vermelha e transparência
+    plt.title(f'Área: {area}')  # Define o título do gráfico com o valor da área
     plt.show()  # Exibe o gráfico
 
 
