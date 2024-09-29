@@ -1,0 +1,14 @@
+def area_quadrado_grafico(lado):    # Define uma função que recebe o lado do quadrado como parâmetro
+    area = lado ** 2    # Calcula a área do quadrado 
+
+    # Gráfico
+    x = [0, lado, lado, 0, 0]    # Define as coordenadas dos vértices do quadrado
+    y = [0, 0, lado, lado, 0]
+    
+    plt.plot(x, y, marker='o')         # Define as coordenadas dos vértices do quadrado
+    plt.fill(x, y, "r", alpha=0.3)
+    plt.title(f'Área: {area}')
+    plt.show()
+
+# Exemplo de uso:
+area_quadrado_grafico(4)
