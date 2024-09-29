@@ -1,0 +1,18 @@
+import math  # Importa a biblioteca para operações matemáticas
+import matplotlib.pyplot as plt  # Importa a biblioteca para criação de gráficos
+
+def diagonal_retangulo_grafico(largura, altura):
+    diagonal = math.sqrt(largura ** 2 + altura ** 2)  # Calcula a diagonal do retângulo usando o teorema de Pitágoras
+    
+    # Desenha o contorno do retângulo conectando os pontos dos vértices
+    plt.plot([0, largura, largura, 0, 0], [0, 0, altura, altura, 0], marker='o')  
+    
+    # Desenha a diagonal do retângulo com linha pontilhada vermelha
+    plt.plot([0, largura], [0, altura], linestyle='--', color='r')
+    
+    # Preenche o retângulo com cor ciano e transparência
+    plt.fill([0, largura, largura, 0], [0, 0, altura, altura], "c", alpha=0.3)
+    
+    plt.title(f'Diagonal: {diagonal:.2f}')  # Define o título do gráfico com o valor da diagonal
+    plt.gca().set_aspect('equal')  # Ajusta a proporção para manter o retângulo correto
+    plt.show()  # Exibe o gráfico
