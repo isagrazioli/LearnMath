@@ -1,0 +1,22 @@
+import math  # Importa a biblioteca para operações matemáticas
+import matplotlib.pyplot as plt  # Importa a biblioteca para criação de gráficos
+import numpy as np  # Importa a biblioteca para operações numéricas
+from mpl_toolkits.mplot3d import Axes3D  # Importa a função para gráficos 3D
+
+def volume_cilindro_grafico(raio, altura):
+    volume = math.pi * (raio ** 2) * altura  # Calcula o volume do cilindro usando a fórmula
+    
+    fig = plt.figure()  # Cria uma nova figura
+    ax = fig.add_subplot(111, projection='3d')  # Cria um gráfico em 3D
+    
+    z = np.linspace(0, altura, 50)  # Gera 50 pontos igualmente espaçados entre 0 e a altura
+    theta = np.linspace(0, 2 * np.pi, 50)  # Gera 50 ângulos entre 0 e 2π
+    theta, z = np.meshgrid(theta, z)  # Cria uma malha de coordenadas combinando θ e z
+    
+    x = raio * np.cos(theta)  # Calcula as coordenadas x ao longo da base do cilindro
+    y = raio * np.sin(theta)  # Calcula as coordenadas y ao longo da base do cilindro
+    
+    ax.plot_surface(x, y, z, color='b', alpha=0.6)  # Desenha a superfície do cilindro em azul com transparência
+    
+    ax.set_title(f'Volume: {volume:.2f}')  # Define o título do gráfico com o valor do volume
+    plt.show()  # Exibe o gráfico
