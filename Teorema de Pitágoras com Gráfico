@@ -1,0 +1,18 @@
+import math  # Importa a biblioteca para operações matemáticas
+import matplotlib.pyplot as plt  # Importa a biblioteca para criação de gráficos
+
+def pitagoras_grafico(cateto_a, cateto_b):
+    hipotenusa = math.sqrt(cateto_a ** 2 + cateto_b ** 2)  # Calcula a hipotenusa usando o Teorema de Pitágoras
+    
+    # Desenha os lados do triângulo
+    plt.plot([0, cateto_a, 0, 0], [0, 0, cateto_b, 0], marker='o')  
+    
+    # Desenha a hipotenusa como linha pontilhada vermelha
+    plt.plot([cateto_a, 0], [0, cateto_b], linestyle='--', color='r')
+    
+    # Preenche o triângulo com cor amarela e transparência
+    plt.fill([0, cateto_a, 0], [0, 0, cateto_b], "y", alpha=0.3)
+    
+    plt.title(f'Hipotenusa: {hipotenusa:.2f}')  # Define o título do gráfico com o valor da hipotenusa
+    plt.gca().set_aspect('equal')  # Ajusta a proporção para manter o triângulo correto
+    plt.show()  # Exibe o gráfico
