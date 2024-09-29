@@ -1,14 +1,14 @@
-def area_quadrado_grafico(lado):    # Define uma função que recebe o lado do quadrado como parâmetro
-    area = lado ** 2    # Calcula a área do quadrado 
+import matplotlib.pyplot as plt  # Importa a biblioteca para criação de gráficos
 
-    # Gráfico
-    x = [0, lado, lado, 0, 0]    # Define as coordenadas dos vértices do quadrado
-    y = [0, 0, lado, lado, 0]
+def perimetro_retangulo_grafico(largura, altura):
+    perimetro = 2 * (largura + altura)  # Calcula o perímetro do retângulo
+    x = [0, largura, largura, 0, 0]  # Define os pontos x dos vértices do retângulo
+    y = [0, 0, altura, altura, 0]  # Define os pontos y dos vértices do retângulo
     
-    plt.plot(x, y, marker='o')         # Define as coordenadas dos vértices do quadrado
-    plt.fill(x, y, "r", alpha=0.3)
-    plt.title(f'Área: {area}')
-    plt.show()
+    plt.plot(x, y, marker='o')  # Desenha o contorno do retângulo com pontos nos vértices
+    plt.fill(x, y, "b", alpha=0.3)  # Preenche o retângulo com cor azul e transparência
+    plt.title(f'Perímetro: {perimetro}')  # Define o título do gráfico com o valor do perímetro
+    plt.show()  # Exibe o gráfico
 
 # Exemplo de uso:
 area_quadrado_grafico(4)
