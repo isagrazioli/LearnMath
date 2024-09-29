@@ -1,16 +1,15 @@
-import matplotlib.pyplot as plt   #Importa a biblioteca Matplotlib, usada para criar gráficos 
+import matplotlib.pyplot as plt  # Importa a biblioteca para criação de gráficos
 
-def perimetro_retangulo_grafico(largura, altura):    # Define função chamada que recebe a largura e a altura do retângulo como parâmetros
-    perimetro = 2 * (largura + altura)       # Calcula o perímetro do retângulo
-
-    # Gráfico                    
-    x = [0, largura, largura, 0, 0]      # Define as coordenadas dos vértices do retângulo
-    y = [0, 0, altura, altura, 0]
+def perimetro_retangulo_grafico(largura, altura):
+    perimetro = 2 * (largura + altura)  # Calcula o perímetro do retângulo
+    x = [0, largura, largura, 0, 0]  # Define os pontos x dos vértices do retângulo
+    y = [0, 0, altura, altura, 0]  # Define os pontos y dos vértices do retângulo
     
-    plt.plot(x, y, marker='o')       # Cria um gráfico
-    plt.fill(x, y, "b", alpha=0.3)      # Preenche o interior do retângulo com a cor azul (b) e define a transparência com o valor alpha=0.3
-    plt.title(f'Perímetro: {perimetro}')     # Adiciona o título ao gráfico, mostrando o valor do perímetro
-    plt.show()
+    plt.plot(x, y, marker='o')  # Desenha o contorno do retângulo com pontos nos vértices
+    plt.fill(x, y, "b", alpha=0.3)  # Preenche o retângulo com cor azul e transparência
+    plt.title(f'Perímetro: {perimetro}')  # Define o título do gráfico com o valor do perímetro
+    plt.show()  # Exibe o gráfico
+
 
 # Exemplo de uso:
 perimetro_retangulo_grafico(5, 3)
