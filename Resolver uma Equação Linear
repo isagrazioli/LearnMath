@@ -1,0 +1,12 @@
+# Exemplo: resolver a equação 3x + 2 = 11
+
+# Definir os valores
+a = 3  # Coeficiente de x
+b = 2  # Termo constante
+c = 11 # Valor do resultado da equação
+
+# Resolver para x
+x = (c - b) / a  # Passa 'b' para o outro lado e divide por 'a'
+
+# Exibe o valor de x
+print(f"O valor de x é: {x}")  # Exibe o valor de x
