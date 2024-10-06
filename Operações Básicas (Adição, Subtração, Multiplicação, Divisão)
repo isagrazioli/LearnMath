@@ -1,0 +1,35 @@
+# Adição interativa
+# Solicita ao usuário dois números
+num1 = float(input("Digite o primeiro número: "))  # Recebe o primeiro número
+num2 = float(input("Digite o segundo número: "))   # Recebe o segundo número
+
+# Realiza a adição dos dois números
+resultado = num1 + num2  # Soma os dois números
+
+# Exibe o resultado da adição
+print(f"O resultado da adição é: {resultado}")  # Exibe o resultado
+
+
+
+# Subtração interativa
+# Solicita ao usuário dois números
+num1 = float(input("Digite o primeiro número: "))  # Recebe o primeiro número
+num2 = float(input("Digite o segundo número: "))   # Recebe o segundo número
+
+# Realiza a subtração dos dois números
+resultado = num1 - num2  # Subtrai o segundo número do primeiro
+
+# Exibe o resultado da subtração
+print(f"O resultado da subtração é: {resultado}")  # Exibe o resultado
+
+
+# Multiplicação interativa
+# Solicita ao usuário dois números
+num1 = float(input("Digite o primeiro número: "))  # Recebe o primeiro número
+num2 = float(input("Digite o segundo número: "))   # Recebe o segundo número
+
+# Realiza a multiplicação dos dois números
+resultado = num1 * num2  # Multiplica os dois números
+
+# Exibe o resultado da multiplicação
+print(f"O resultado da multiplicação é: {resultado}")  # Exibe o resultado
