@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt  # Importa a biblioteca para gráficos
+
+# Define a função y = 2x + 1
+def funcao_linear(x):
+    return 2 * x + 1  # Calcula o valor de y para cada valor de x
+
+# Gera os valores de x de -10 a 10
+x_values = range(-10, 11)  # Define o intervalo de x de -10 a 10
+
+# Calcula os valores correspondentes de y
+y_values = [funcao_linear(x) for x in x_values]  # Aplica a função para cada valor de x
+
+# Cria o gráfico
+plt.plot(x_values, y_values)  # Plota o gráfico com x e y
+plt.title("Gráfico da Função Linear: y = 2x + 1")  # Título do gráfico
+plt.xlabel("x")  # Rótulo do eixo x
+plt.ylabel("y")  # Rótulo do eixo y
+plt.grid(True)  # Adiciona uma grade ao gráfico
+plt.show()  # Exibe o gráfico
